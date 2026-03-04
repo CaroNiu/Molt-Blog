@@ -1,6 +1,6 @@
 # Molt Blog
 
-个人博客系统 - Vue 3 + Java 后端
+个人博客系统 - Vue 3 + Spring Boot 后端
 
 ## 技术栈
 
@@ -11,23 +11,45 @@
 - Axios (HTTP 请求)
 - Marked (Markdown 解析)
 
-### 后端 (需要实现)
-- Java + Spring Boot
-- 数据库 (MySQL/PostgreSQL)
-- JWT 认证
+### 后端
+- Java 17 + Spring Boot 3.2
+- Spring Security + JWT
+- H2 内存数据库
+- JPA / Hibernate
 
-## 开发
+## 快速开始
 
+### 前端
 ```bash
-# 安装依赖
+cd frontend
 npm install
-
-# 启动开发服务器
 npm run dev
-
-# 构建生产版本
-npm run build
 ```
+
+### 后端
+```bash
+cd backend
+mvn spring-boot:run
+```
+
+## 默认管理员账号
+
+- **用户名：** `admin`
+- **密码：** `admin123`
+
+## 数据库
+
+使用 H2 内存数据库，启动后可访问：
+- **H2 Console：** http://localhost:8080/h2-console
+- **JDBC URL：** `jdbc:h2:file:./data/blog`
+- **用户名：** `sa`
+- **密码：** 空
+
+## 开发端口
+
+- 前端：http://localhost:5173 (Vite) 或 http://localhost:3000
+- 后端：http://localhost:8080
+- H2 Console：http://localhost:8080/h2-console
 
 ## 后端 API 接口
 
